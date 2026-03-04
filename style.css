@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #2e5b60;
+    color: #fff;
+}
+
+
+.hero {
+    height: 50px;
+    background-image: url(imagem/league-of-legends-hd-mi87lchw5djeodqn.jpg);
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    color: #f2f6f7;
+  }
+
+.hero-content h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #ffcc00;
+    color: #000;
+    border-radius: 5px;
+}
+
+
+.caixa {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.caixa img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+#Sobre{
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #201c1c;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+#contato {
+    padding: 60px 20px;
+    background-color: rgba(20, 20, 20, 0.9); /* Um tom mais escuro para destaque */
+    text-align: center;
+}
+
+#contato h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #09cfdd; /* Cor principal do seu site */
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Importante para o celular */
+    gap: 40px;
+    font-style: normal; /* Remove o itálico padrão da tag address */
+}
+
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px; /* Largura fixa para cada item ficar alinhado */
+}
+
+.social-item button {
+    width: 165px;
+}
+
+
+.social-item p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+
+.social-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+
+.social-item img:hover {
+    transform: scale(1.2); /* Efeito de crescimento ao passar o mouse */
+}
+
+section#feedback h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.social-item span {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #ccc;
+
+
+
+
+}
+  /* Container de Feedback estilo Hextec */
+.feedback-card {
+    background: rgba(10, 20, 40, 0.95); /* Azul escuro profundo do LoL */
+    border: 2px solid #c8aa6e; /* Dourado Champagne */
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(200, 170, 110, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.feedback-card p {
+    color: #c8aa6e;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Área de Texto */
+#user-feedback {
+    width: 100%;
+    min-height: 120px;
+    background: #010a13; /* Fundo do cliente LoL */
+    border: 1px solid #5b5a56;
+    color: #f0e6d2;
+    padding: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: vertical;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#user-feedback:focus {
+    border: 1px solid #c8aa6e;
+    box-shadow: 0 0 5px rgba(200, 170, 110, 0.5);
+}
+
+/* Botão de Enviar */
+.btn-league {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: linear-gradient(to bottom, #1e2328, #111);
+    color: #c8aa6e;
+    border: 2px solid #c8aa6e;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.btn-league:hover {
+    background: #c8aa6e;
+    color: #010a13;
+    box-shadow: 0 0 20px rgba(200, 170, 110, 0.4);
+}
+
+.btn-league:active {
+    transform: scale(0.98);
+}
+  
+  .banner-principal {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+
+.carousel-img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+
+
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #ffcc00;
+    color: black;
+}

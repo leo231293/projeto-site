@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedbacks Recebidos</title>
+    <style>
+        /* Mantendo o seu padrão de estilo */
+        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .social-container { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .social-item { 
+            background: white; padding: 15px; border-radius: 8px; 
+            border: 1px solid #ccc; width: 100%; max-width: 500px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .data { font-size: 12px; color: #888; display: block; margin-top: 10px; }
+        h2 { text-align: center; color: #333; }
+        .btn-voltar { text-decoration: none; color: #007bff; font-weight: bold; display: block; text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<section id="lista-feedbacks">
+    <h2>Feedbacks dos Alunos</h2>
+    <div id="containerFeedbacks" class="social-container">
+        </div>
+    <a href="index.html" class="btn-voltar">← Voltar para Página Principal</a>
+</section>
+
+<script>
+    function carregarFeedbacks() {
+        const container = document.getElementById('containerFeedbacks');
+        const feedbacks = JSON.parse(localStorage.getItem('listaFeedbacks') || "[]");
+
+        if (feedbacks.length === 0) {
+            container.innerHTML = "<p>Ainda não há feedbacks registrados.</p>";
+            return;
+        }
+
+        // Inverte para mostrar os mais recentes primeiro e cria o HTML
+        container.innerHTML = feedbacks.reverse().map(f => `
+            <div class="social-item">
+                <p>"${f.texto}"</p>
+                <span class="data">Enviado em: ${f.data}</span>
+            </div>
+        `).join('');
+    }
+
+    // Executa ao carregar a página
+    window.onload = carregarFeedbacks;
+</script>
+
+</body>
+</html>
